@@ -1,0 +1,140 @@
+@import '../Variables/Variables';
+nav{
+    display: inline-flex;
+    width: 100%;
+}
+nav div:first-child{
+    padding: 0 15%;
+}
+span{
+font-size: 16px;
+}
+
+
+.shipping{
+    @include dropDown;
+
+    .shipping-content{
+        @include dropDownContent;
+            img{
+                max-width: 12%;
+                padding: 0 12% 0 5%;
+            }
+        }
+    }
+
+
+.shipping:hover .shipping-content{
+    display: block;
+}
+
+.shipping-content a:hover{
+    background-color: $dropHover;
+}
+
+
+//Men's Section
+.men{
+    @include dropDown;
+    .men-content{
+        @include dropDownContent;
+    }
+}
+
+.men:hover .men-content{
+    display: block;
+}
+
+.men-content a:hover{
+    background-color: $dropHover;
+}
+
+
+
+
+//Women's Section
+.women{
+    @include dropDown;
+    .women-content{
+        @include dropDownContent;
+    }    
+}
+
+.women:hover .women-content{
+    display: block;
+}
+
+.women-content a:hover{
+    background-color: $dropHover;
+}
+
+
+
+//Account
+.account{
+    @include dropDown;
+.account-content{
+    @include iconDrop;
+    padding: 50% 0 0 50%;
+
+}
+}
+
+
+.account:hover .account-content{
+    display: block;
+}
+
+.account-content a:hover{
+    background-color: $dropHover;
+}
+
+
+//Search
+.search{
+    position: relative;
+    display: inline-block;
+    .search-content{
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        z-index: 1;
+        input{
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+// Add JS on click to search bar
+
+.search:active .search-content{
+    display: block;
+}
+
+
+
+
+
+
+//Cart
+
+.cart{
+    @include dropDown;
+    .cart-content{
+        @include iconDrop;
+        padding: 50% 0 0 55%;
+    }    
+}
+
+.cart:hover .cart-content{
+    display: block;
+}
+
+.cart-content a:hover{
+    background-color: $dropHover;
+}

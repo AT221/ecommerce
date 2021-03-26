@@ -1,0 +1,49 @@
+// background color variable white
+$dropHover: rgb(228, 228, 228);
+$dropBackground: rgb(255, 255, 255);
+
+
+
+
+@mixin dropDown{
+    position: relative;
+    display: inline-block;
+}
+
+@mixin dropDownContent{
+    display: none;
+    position: absolute;
+    background-color: $dropBackground;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    a{
+        color: rgb(0, 0, 0);
+        padding: 2% 0;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
+@mixin iconDrop {
+    display: none;
+    position: absolute;
+    background-color: $dropBackground;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 300%;
+    height: 300%;
+    a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
+
+//Mixin for the mens and womens collections should all be the same
