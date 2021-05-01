@@ -3,18 +3,22 @@ $dropHover: rgb(228, 228, 228);
 $dropBackground: rgb(255, 255, 255);
 
 
-
+@mixin centering($color){
+    text-align: center;
+    background-color: $color;
+}
 
 @mixin dropDown{
     position: relative;
     display: inline-block;
+    
 }
 
 @mixin dropDownContent{
     display: none;
     position: absolute;
     background-color: $dropBackground;
-    min-width: 160px;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     a{
@@ -31,11 +35,10 @@ $dropBackground: rgb(255, 255, 255);
     display: none;
     position: absolute;
     background-color: $dropBackground;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    width: 300%;
-    height: 300%;
+    width: 10vw;
+    height: 10vw;
     a{
         color: rgb(0, 0, 0);
         text-decoration: none;
@@ -45,5 +48,13 @@ $dropBackground: rgb(255, 255, 255);
     }
 }
 
+@mixin iconSize{
+    display: flex;
+    margin: auto;
+    img{
+        max-width: 2vw;
+        // padding-left: 2vw;
 
+    }
+}
 //Mixin for the mens and womens collections should all be the same

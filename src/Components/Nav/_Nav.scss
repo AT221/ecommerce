@@ -1,140 +1,180 @@
 @import '../Variables/Variables';
-nav{
-    display: inline-flex;
+
+.top-container{
+    position: fixed;
     width: 100%;
+    z-index: 2;
+    background-color: #ffff;
 }
-nav div:first-child{
-    padding: 0 15%;
+
+nav{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+   
 }
+
 span{
 font-size: 16px;
 }
 
+.top-title{
+    width: 90%;
+    margin: auto;
+   h2{
+        @include centering(none);
+   }
+   p{
+        @include centering(#6B8F71);
+        padding: 1vh;
+        color: #ffff;
+   }
+}
 
 .shipping{
     @include dropDown;
-
-    .shipping-content{
-        @include dropDownContent;
+        flex: 4;
+        .shipping-content{
+            @include dropDownContent;
+            max-width: 10vw;
             img{
                 max-width: 12%;
                 padding: 0 12% 0 5%;
             }
+                a:hover{
+                background-color: $dropHover;
+            }
         }
-    }
+        .shipping-txt{
+            width: fit-content;
+    
+        }
+}
 
-
-.shipping:hover .shipping-content{
+//All Hover Displays
+.shipping-txt:hover .shipping-content,
+ .men-txt:hover .men-content, 
+ .women-txt:hover .women-content,
+ .account-img:hover .account-content,
+ .cart-img:hover .cart-content{
     display: block;
 }
 
-.shipping-content a:hover{
+
+.shipping-content a:hover, 
+.men-txt a:hover, 
+.women-content a:hover,
+.cart-content a:hover
+{
     background-color: $dropHover;
 }
 
 
 //Men's Section
-.men{
+.men, .women{
     @include dropDown;
-    .men-content{
+    flex: 2;
+    // text-align: center;
+    .men-content, .women-content{
         @include dropDownContent;
+
+
+//THIS IS THE PROBLEM
+        // margin-top: 2.5vh;
+        max-width: 30vw;
+        // height: 15vw;
     }
-}
-
-.men:hover .men-content{
-    display: block;
-}
-
-.men-content a:hover{
-    background-color: $dropHover;
-}
-
-
-
-
-//Women's Section
-.women{
-    @include dropDown;
-    .women-content{
-        @include dropDownContent;
-    }    
-}
-
-.women:hover .women-content{
-    display: block;
-}
-
-.women-content a:hover{
-    background-color: $dropHover;
+    .men-txt, .women-txt{
+        width: fit-content;
+    }
 }
 
 
 
 //Account
 .account{
+    @include iconSize;
     @include dropDown;
-.account-content{
-    @include iconDrop;
-    padding: 50% 0 0 50%;
+    .account-content{
+        @include iconDrop;
+        text-align: center;
+        width: 12vw;
+        
+    .account-title{
+        margin: 2vh 0;
+        background-color: orange;
+    }
+    button{
+        width: 100%;
+        margin: 1vh 0;
+        
+        padding:1vh;
+    }
 
 }
-}
-
-
-.account:hover .account-content{
-    display: block;
-}
-
-.account-content a:hover{
-    background-color: $dropHover;
 }
 
 
 //Search
 .search{
     position: relative;
-    display: inline-block;
-    .search-content{
-        display: none;
-        position: absolute;
-        min-width: 160px;
-        z-index: 1;
-        input{
-            text-decoration: none;
-            display: block;
-            width: 100%;
-            cursor: pointer;
-        }
-    }
+            @include iconSize;
+      
+    
 }
 
 
 
 // Add JS on click to search bar
 
-.search:active .search-content{
+.search-img:active .search-content{
     display: block;
 }
-
-
-
 
 
 
 //Cart
 
 .cart{
+    @include iconSize;
     @include dropDown;
     .cart-content{
         @include iconDrop;
-        padding: 50% 0 0 55%;
+        margin-left: -5vw;
+        button{
+            width: 100%;
+        }
     }    
 }
 
-.cart:hover .cart-content{
-    display: block;
+
+.account, .cart, .search{
+    flex: .5;
+}
+.account-img, .cart-img{
+    width: 2vw;
 }
 
-.cart-content a:hover{
-    background-color: $dropHover;
+//on click display flex
+.search-content{
+    display: none;
+    // display:flex;
+    position: absolute;
+    width: 90%;
+    margin-top: 4.5vh;
+    z-index: 1;
+    button{
+        width: fit-content;
+        img{
+            max-width: 1.5vw;
+        }
+    }
+    input{
+        
+        // text-decoration: none;
+        display: block;
+        width: 100%;
+    cursor: pointer;
+}
 }
