@@ -1,27 +1,28 @@
 const initState = {
-    items:[],
+    womensItems:[],
     mensItems:[],
     loading: false,
     error: null
 }
 
 
+
 const productReducer = (state=initState, action)=>{
     switch(action.type){
-        case 'FETCH_POSTS_REQUEST':
+        case 'FETCH_PRODUCT_REQUEST':
             return{
                 ...state,
                 loading:true,
                 error:null,
             } 
-        case 'FETCH_POSTS_SUCCESS':
+        case 'FETCH_PRODUCT_SUCCESS':
             return{
                 ...state,
                 loading:false,
-                items:action.payload,
-                mensItems:action.payloads
+                womensItems:action.payload_Womens,
+                mensItems:action.payloads_Mens,
             } 
-        case 'FETCH_POSTS_FAILURE':
+        case 'FETCH_PRODUCT_FAILURE':
             return{
                 ...state,
                 loading:false,

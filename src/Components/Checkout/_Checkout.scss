@@ -1,0 +1,77 @@
+@import '../Variables//Variables';
+
+.cartContainer{
+
+    height: 100%;
+    width: 100%;
+ 
+    display: flex;
+    .title{
+    display: inline-block;
+    }
+    .topCart{
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        margin-left: 5%;
+  
+    }
+    .cartImg{
+        max-width: 100%;
+        max-height: 20%;
+    }
+    
+    .orderSummary{
+        display: inline-block;
+        margin-right: 10%;
+        .topSummary{
+            padding: 5%;
+            .summary{
+                display: flex;
+                :last-child{
+                    padding-left: 30%;
+                }
+            }
+        }
+    }
+}
+
+.cartList{
+    list-style: none;
+    margin: 0% 5%;
+}
+
+.quantity{
+    width: 100%;
+    :first-child{
+        // this changes the width of the button
+        // padding-left: 5%;
+        margin-left: 5%;
+    }
+    :nth-child(3){
+        margin-right: 5%;
+    }
+    :last-child{
+        margin: 0 5%;
+    }
+ 
+    input{
+        max-width: 5%;
+        text-align: center;
+    }
+    p{
+        display: inline-flex;
+    }
+
+    
+}
+//make a variable for this
+.orderSummary{
+    width: 100%;
+ 
+}
+.topSummary{
+ 
+
+    border: 1px solid rgb(175, 175, 175)
+}
