@@ -13,7 +13,21 @@ export const decrease = () =>{
     };
 };
 
+//Hiding Top Nav
 
+export const up = () =>{
+    return{
+        type:'UP'
+    }
+}
+export const down = () =>{
+    return{
+        type:'DOWN'
+    }
+}
+
+
+//Fetching Products
 export const fetchProducts = () =>{
     return async (dispatch, getState)=>{
         dispatch({type: 'FETCH_PRODUCT_REQUEST'})

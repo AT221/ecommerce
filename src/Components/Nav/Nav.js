@@ -1,6 +1,7 @@
 import React from 'react';
 import './_Nav.scss';
-
+import {useSelector, useDispatch} from 'react-redux';
+import {up , down} from '../../Redux/Actions/Actions';
 
 //Flags
 import USA from '../Images/Flags/USA.png';
@@ -12,7 +13,6 @@ import Japan from '../Images/Flags/Japan.png';
 
 //Icons
 import account from '../Images/Navbar/account.png';
-
 import cart from '../Images/Navbar/cart.png';
 import search from '../Images/Navbar/search.png';
 
@@ -22,15 +22,22 @@ import search from '../Images/Navbar/search.png';
 
 // add java to on click replace usd to whatever content on click replace the header with img + currency abreviation
 const Nav = () => {
+  const hideNav = useSelector (state => state.hideNav);
+  const dispatch = useDispatch();
+
+  const handleSlide = () =>{
+    window.scrollY > 50 ? dispatch(down()) : dispatch(up());
+  }
+  window.addEventListener('scroll', handleSlide)
     return (
         <div className='top-container'>
             <header>
                 <div className='top-title'>
-                  <h2><a>Aye T</a></h2>
-                  <p>Free Shipping and Hassle-Free Returns Worldwide</p>
+                  <h2 className={hideNav ? 'banner-active' : 'banner'}><a>Aye T</a></h2>
+                  <p className={hideNav ? 'nav-active' : 'nav'}>Free Shipping and Hassle-Free Returns Worldwide</p>
                 </div>
 
-                <nav>
+                <nav className={hideNav ? 'nav-active' : 'nav'}>
                     <div className='shipping'>
                       <div className='shipping-txt'>Shipping To:<span> $palceholder</span>
                         <div className='shipping-content'>
