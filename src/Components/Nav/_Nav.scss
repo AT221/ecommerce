@@ -4,7 +4,7 @@
     position: fixed;
     width: 100%;
     z-index: 2;
-    background-color: #ffff;
+    background-color: $dropBackground;
 }
 
 nav{
@@ -12,7 +12,7 @@ nav{
     width: 90%;
     margin: auto;
     flex-wrap: wrap;
-    background-color: #F2F2F2;
+    background-color: $navBackgroundColor;
    margin-bottom: 1vh;
    align-items: center;
 }
@@ -38,7 +38,9 @@ font-size: 16px;
     @include dropDown;
         flex: 4;
         .shipping-content{
+            @include categories(2.3vh 0 0 -3%);
             @include dropDownContent;
+            margin-top: 1vh;
             max-width: 10vw;
             img{
                 max-width: 12%;
@@ -50,7 +52,7 @@ font-size: 16px;
         }
         .shipping-txt{
             width: fit-content;
-    
+            padding: 3%;
         }
 }
 
@@ -76,19 +78,22 @@ font-size: 16px;
 //Men's Section
 .men, .women{
     @include dropDown;
+    
+    
     flex: 2;
     // text-align: center;
     .men-content, .women-content{
         @include dropDownContent;
-
-
-//THIS IS THE PROBLEM
-        // margin-top: 2.5vh;
+        text-align: center;
         max-width: 30vw;
-        // height: 15vw;
+        :hover{
+            font-weight: bold;
+            background-color: $dropHover;
+        }
     }
     .men-txt, .women-txt{
         width: fit-content;
+        padding: 6%;
     }
 }
 
@@ -100,12 +105,12 @@ font-size: 16px;
     @include dropDown;
     .account-content{
         @include iconDrop;
+        @include categories(.5vh 0 0 -5.3vw);
         text-align: center;
         width: 12vw;
         
     .account-title{
         margin: 2vh 0;
-        background-color: orange;
     }
     button{
         width: 100%;
@@ -127,7 +132,6 @@ font-size: 16px;
 }
 
 
-
 // Add JS on click to search bar
 
 .search-img:active .search-content{
@@ -142,8 +146,8 @@ font-size: 16px;
     @include iconSize;
     @include dropDown;
     .cart-content{
+        @include categories(.5vh 0 0 -5.3vw);
         @include iconDrop;
-        margin-left: -5vw;
         button{
             width: 100%;
         }
@@ -153,9 +157,16 @@ font-size: 16px;
 
 .account, .cart, .search{
     flex: .5;
+    height: 6vh;
+
+    align-items: center;
+    
 }
 .account-img, .cart-img{
+    margin-top: .9vh;
     width: 2vw;
+    height: 5vh;
+    align-items: center;
 }
 
 //on click display flex
@@ -181,8 +192,6 @@ font-size: 16px;
 }
 }
 
-//banner-active
-//banner
 
 //Sliding Top Element Key Frames and Implementation
 
@@ -209,10 +218,6 @@ font-size: 16px;
 } 
 
 
-
-
-//nav-active
-//nav
 //Sliding Bottom Element Key Frames and Implementation
 
 .nav{
@@ -242,4 +247,15 @@ font-size: 16px;
   } 
 
 
+.men-txt:hover, .women-txt:hover{
+        font-weight: bold;
+        background-color: #ffffff;
+}
 
+.men-content{
+    @include categories(2.2vh 0 0 -20%);
+}
+
+.women-content{
+    @include categories(2.2vh 0 0 -16.5%);
+}

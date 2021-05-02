@@ -1,7 +1,7 @@
 // background color variable white
-$dropHover: rgb(228, 228, 228);
-$dropBackground: rgb(255, 255, 255);
-
+$dropHover: #F2F2F2;
+$dropBackground: #ffff;
+$navBackgroundColor:  #F2F2F2;
 
 @mixin centering($color){
     text-align: center;
@@ -18,7 +18,7 @@ $dropBackground: rgb(255, 255, 255);
     display: none;
     position: absolute;
     background-color: $dropBackground;
-    width: 100%;
+    width: 60%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     a{
@@ -39,6 +39,7 @@ $dropBackground: rgb(255, 255, 255);
     z-index: 1;
     width: 10vw;
     height: 10vw;
+    
     a{
         color: rgb(0, 0, 0);
         text-decoration: none;
@@ -57,4 +58,18 @@ $dropBackground: rgb(255, 255, 255);
 
     }
 }
+
+@mixin hoverNav{
+    :hover{
+        font-weight: bold;
+        background-color: #F2F2F2;
+    }
+}
 //Mixin for the mens and womens collections should all be the same
+
+
+//Men and women need their own mixed for their drop down menus with margin as a parameter and then text-align center 
+
+@mixin categories($margin){
+    margin: $margin;
+}

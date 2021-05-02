@@ -39,7 +39,8 @@ const Nav = () => {
 
                 <nav className={hideNav ? 'nav-active' : 'nav'}>
                     <div className='shipping'>
-                      <div className='shipping-txt'>Shipping To:<span> $palceholder</span>
+                      <div className='shipping-txt'>
+                      <div>Shipping To:<span> $palceholder</span> </div>
                         <div className='shipping-content'>
                           <a><img src={USA}/>United States</a>
                           <a><img src={Canada}/>Canada</a>
@@ -55,7 +56,8 @@ const Nav = () => {
 {/* change these depending on the API */}
 
                     <div className='men'>
-                      <div className='men-txt'>Shop Men
+                      <div className='men-txt'>
+                      <div>Shop Men</div>
                         <div className='men-content'>
                           <a>New</a>
                           <a>Best Sellers</a>
@@ -68,7 +70,8 @@ const Nav = () => {
 {/* change these depending on the API */}
 
                     <div className='women'>
-                      <div className='women-txt'>Shop Women
+                      <div className='women-txt'>
+                      <div>Shop Women</div>
                         <div className='women-content'>
                           <a>New</a>
                           <a>Best Sellers</a>
