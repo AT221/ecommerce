@@ -42,13 +42,13 @@
 
 .slide{
     opacity: 0;
-    transition-duration: 2s ;
+    transition-duration: 1s ;
 
 }
 
 .slide.active{
     opacity: 1;
-    //this is the flashing that needs to change
-    transition-duration: .5s;
+ //maybe keep these transition duration?
+    transition-duration: 2s;
     transform: scale(1.08);
 }
