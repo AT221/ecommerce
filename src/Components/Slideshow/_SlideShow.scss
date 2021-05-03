@@ -10,9 +10,10 @@
 }
 
 .image{
+    padding-top: 19vh;
     margin:auto;
-    width: 82vw;
-    height: 84vh;
+    width: 82.5vw;
+    height: 70vh;
     filter: brightness(60%);
     border-radius: 10px;
 }
@@ -42,13 +43,9 @@
 
 .slide{
     opacity: 0;
-    transition-duration: 2s ;
-
 }
 
 .slide.active{
     opacity: 1;
-    //this is the flashing that needs to change
-    transition-duration: .5s;
     transform: scale(1.08);
 }

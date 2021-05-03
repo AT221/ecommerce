@@ -21,7 +21,7 @@ const SlideShow = () => {
         const playSlide = () =>{
             autoPlayRef.current();
         }
-        const interval = setInterval(playSlide, 7000)
+        const interval = setInterval(playSlide, 7500)
      }, [])
 
 
@@ -35,7 +35,6 @@ const prevSlide = () =>{
 
 
     return (
-
         <section className='slider'>
             <a className='left-arrow' onClick={prevSlide}>&#10094;</a> 
             <a className='right-arrow' onClick={nextSlide} >&#10095;</a>
