@@ -4,12 +4,14 @@ import Nav from '../Nav/Nav';
 import HomePage from '../HomePage/HomePage';
 import Gallery from '../Gallery/Gallery';
 import Checkout from '../Checkout/Checkout';
+import SlideShow from '../Slideshow/SlideShow';
 
 
 const  App = () => {
   return (
     <div className="App">
       <Nav />
+      <SlideShow/>
       <HomePage />
       <Gallery />
       <Checkout />

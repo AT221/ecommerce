@@ -5,6 +5,18 @@
     width: 100%;
     z-index: 2;
     background-color: $dropBackground;
+    max-height: 100%;
+    transition: max-height 24s ease-out;
+}
+
+.top-container-active{
+    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: $dropBackground;
+    max-height: 16%;
+    transition: max-height 10% 6s ease-in;
 }
 
 nav{
@@ -259,3 +271,4 @@ font-size: 16px;
 .women-content{
     @include categories(2.2vh 0 0 -16.5%);
 }
+

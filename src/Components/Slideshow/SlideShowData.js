@@ -5,13 +5,13 @@ import Purse from '../Images/SlideShow/Purse.jpg';
 
 export const SlideShowData =[
     {
-        image:{Shirt}
+        image:Shirt
     },
     {
-        image:{Backpack}
+        image:Backpack
     },
     {
-        image:{Purse}
+        image:Purse
     },
 
 ]

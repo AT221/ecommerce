@@ -30,7 +30,9 @@ const Nav = () => {
   }
   window.addEventListener('scroll', handleSlide)
     return (
-        <div className='top-container'>
+    
+         <div className={hideNav ? 'top-container-active' : 'top-container'}>
+         {/* <div className='top-container'> */}
             <header>
                 <div className='top-title'>
                   <h2 className={hideNav ? 'banner-active' : 'banner'}><a>Aye T</a></h2>

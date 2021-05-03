@@ -1,6 +1,6 @@
 import axios from "axios"
 
-
+//Checkout Counter
 export const increase = () =>{
     return{
         type: 'INCREASE'
@@ -10,6 +10,31 @@ export const increase = () =>{
 export const decrease = () =>{
     return {
         type: 'DECREASE'
+    };
+};
+
+//Slider Actions
+export const resetSlide = () =>{
+    return {
+        type: 'RESET_SLIDE'
+    };
+};
+
+export const increaseSlide = () =>{
+    return{
+        type: 'INCREASE_SLIDE'
+    };
+};
+
+export const decreaseSlide = () =>{
+    return{
+        type: 'DECREASE_SLIDE'
+    };
+};
+
+export const slideLength = () =>{
+    return{
+        type: 'SLIDE_LENGTH'
     };
 };
 
@@ -49,3 +74,6 @@ export const fetchProducts = () =>{
         }
     }
 }
+
+
+
