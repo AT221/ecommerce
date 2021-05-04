@@ -13,8 +13,8 @@ const  App = () => {
       <Nav />
       <SlideShow/>
       <HomePage />
-      <Gallery />
-      <Checkout />
+      {/* <Gallery />
+      <Checkout /> */}
     </div>
   );
 }

@@ -21,7 +21,7 @@
 
 nav{
     display: flex;
-    width: 90%;
+    width: 100%;
     margin: auto;
     flex-wrap: wrap;
     background-color: $navBackgroundColor;
@@ -34,13 +34,13 @@ font-size: 16px;
 }
 
 .top-title{
-    width: 90%;
+    width: 100%;
     margin: auto;
    h2{
         @include centering(none);
    }
    p{
-        @include centering(#6B8F71);
+        @include centering(#758070);
         padding: 1vh;
         color: #ffff;
    }

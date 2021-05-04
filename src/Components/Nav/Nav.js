@@ -35,7 +35,7 @@ const Nav = () => {
          {/* <div className='top-container'> */}
             <header>
                 <div className='top-title'>
-                  <h2 className={hideNav ? 'banner-active' : 'banner'}><a>Aye T</a></h2>
+                  <h2 className={hideNav ? 'banner-active' : 'banner'}><a>Aye. T. C. Unlimited</a></h2>
                   <p className={hideNav ? 'nav-active' : 'nav'}>Free Shipping and Hassle-Free Returns Worldwide</p>
                 </div>
 

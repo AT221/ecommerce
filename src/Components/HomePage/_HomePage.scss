@@ -2,8 +2,68 @@
 
 
 
-.homePage-Container{
-    max-width: 90%;
+.homePage-container{
+    max-width: 100%;
     margin: 0 auto;
+    .sustain{
+        margin: 0 auto;
+        width: 90%;
+        text-align: center;
 
+    }
+    .figure-div{
+        display: flex;
+        max-width: 100%;
+        flex-wrap: wrap;
+        padding: 2vh 0;
+    }
+    
+    
+    .figure-container{
+        margin: 0 auto;
+        img{
+            width: 20vw;
+            height: 40vh;
+            min-width: 240px;
+            }
+        figcaption{
+            padding: .5vh 0;
+        }
+    }
+
+}
+.review-heading{
+    margin-top: 8vh;
+    height: 35vh;
+    width: 100%;
+    background-color: $reviewColor;
+    color: $dropBackground;
+    h4{
+        text-align: center;
+        font-size: 1.5rem;
+        background-color: $reviewColor;
+        padding-top: 5vh;
+    }
+    hr{
+        width: 10%;
+    }
+}
+.review-container{
+    margin: auto;
+    width: 100%;
+    display: flex;
+
+    .ratings-container{
+        list-style: none;
+        padding-top: 3vh;
+    }
+    .review-list{
+        list-style: none;
+        margin: auto;
+        text-align: center;
+        li{
+            width: 30vw;
+            margin: auto;
+        }
+    }
 }

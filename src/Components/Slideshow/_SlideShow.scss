@@ -10,9 +10,10 @@
 }
 
 .image{
+    padding-top: 19vh;
     margin:auto;
-    width: 82vw;
-    height: 84vh;
+    width: 82.5vw;
+    height: 70vh;
     filter: brightness(60%);
     border-radius: 10px;
 }
@@ -39,16 +40,14 @@
     user-select: none;
 }
 
-
 .slide{
     opacity: 0;
-    transition-duration: 1s ;
-
+    transition-duration: .5s ;
 }
 
 .slide.active{
     opacity: 1;
  //maybe keep these transition duration?
-    transition-duration: 2s;
+    transition-duration: 4s;
     transform: scale(1.08);
 }
