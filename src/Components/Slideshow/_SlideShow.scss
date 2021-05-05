@@ -19,25 +19,15 @@
 }
 
 .right-arrow{
-    position: absolute;
     top: 50%;
-    right: 32px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 1;
-    cursor: pointer;
-    user-select: none;
+    @include arrows(#000);
+    right: 2vw;
 }
 
 .left-arrow{
-    position: absolute;
     top: 50%;
-    left: 32px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 1;
-    cursor: pointer;
-    user-select: none;
+    @include arrows(#000);
+    left: 2vw;
 }
 
 .slide{
