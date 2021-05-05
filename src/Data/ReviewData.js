@@ -3,16 +3,17 @@ const star = 'https://img.icons8.com/fluent/48/000000/star.png';
 export const ReviewData = [
     {
         stars: star,
-        title: 'Great Quality!',
-        description:`I purchased a backpack and it has held up through the rain, snow, and sun. The bag is the perfect size for all of my belongings which is usally a laptop, pair of shoes, headphones, a book, and my water bottle. I highly recommend. `,
-        name: 'Alice W.'
-
-    },
-    {
-        stars: star,
         title: 'Sweatshirt',
         description:`This is the most comfortable sweatshirt I have ever bought. I am going to be buying more soon`,
         name: 'John L.'
+
+    },
+    {
+ 
+        stars: star,
+        title: 'Great Quality!',
+        description:`I purchased a backpack and it has held up through the rain, snow, and sun. The bag is the perfect size for all of my belongings which is usally a laptop, pair of shoes, headphones, a book, and my water bottle. I highly recommend. `,
+        name: 'Alice W.'
 
     },
     {

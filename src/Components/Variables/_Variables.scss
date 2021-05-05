@@ -75,3 +75,13 @@ $reviewColor: #3C4C58;
 @mixin categories($margin){
     margin: $margin;
 }
+
+
+@mixin arrows($color){
+    position: absolute;
+    font-size: 3rem;
+    color: $color;
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+}
