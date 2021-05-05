@@ -65,6 +65,12 @@ font-size: 16px;
         .shipping-txt{
             width: fit-content;
             padding: 3%;
+            span{
+                img{
+                    padding:0 .5vw;
+                    max-width: 4%;
+                }
+            }
         }
 }
 

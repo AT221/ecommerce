@@ -1,7 +1,8 @@
 import productReducer from './productReducer';
 import counterReducer from './counterReducer';
 import hideNavReducer from './hideNavReducer';
-import counterCreator from './CounterCreatorReducer';
+import counterCreator from './counterCreatorReducer';
+import country from './countryReducer';
 
 import {combineReducers} from 'redux';
 
@@ -14,6 +15,7 @@ const allReducers = combineReducers({
     hideNav: hideNavReducer,
     slide: counterCreator('SLIDE', SlideShowData),
     reviewSlide: counterCreator('REVIEW', ReviewData),
+    country
   
 })
 
