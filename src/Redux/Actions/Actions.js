@@ -1,6 +1,8 @@
 import axios from "axios"
 
-//Checkout Counter
+//Checkout Counter 
+
+//DELETE THESE LATER ON  AND USE SLIDER ACTIONS BELOW
 export const increase = () =>{
     return{
         type: 'INCREASE'
@@ -14,27 +16,27 @@ export const decrease = () =>{
 };
 
 //Slider Actions
-export const resetSlide = () =>{
+export const resetSlide = (name) =>{
     return {
-        type: 'RESET_SLIDE'
+        type:`RESET_${name}`
     };
 };
 
-export const increaseSlide = () =>{
+export const increaseSlide = (name) =>{
     return{
-        type: 'INCREASE_SLIDE'
+        type: `INCREASE_${name}`
     };
 };
 
-export const decreaseSlide = () =>{
+export const decreaseSlide = (name) =>{
     return{
-        type: 'DECREASE_SLIDE'
+        type: `DECREASE_${name}`
     };
 };
 
-export const slideLength = () =>{
+export const slideLength = (name) =>{
     return{
-        type: 'SLIDE_LENGTH'
+        type: `${name}_LENGTH`
     };
 };
 

@@ -1,6 +1,6 @@
-import {SlideShowData} from '../../Components/Slideshow/SlideShowData';
+import {ReviewData} from '../../Data/ReviewData';
 
-const slideReducer = (state = 0, action) =>{
+const reviewReducer = (state = 0, action) =>{
     switch(action.type){
         case 'INCREASE_SLIDE':
             return state + 1;
