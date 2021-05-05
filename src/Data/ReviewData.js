@@ -12,7 +12,7 @@ export const ReviewData = [
  
         stars: star,
         title: 'Great Quality!',
-        description:`I purchased a backpack and it has held up through the rain, snow, and sun. The bag is the perfect size for all of my belongings which is usally a laptop, pair of shoes, headphones, a book, and my water bottle. I highly recommend. `,
+        description:`I purchased a backpack it is the perfect size for all of my belongings which is usally a laptop, pair of shoes, headphones, a book, and my water bottle. I highly recommend. `,
         name: 'Alice W.'
 
     },

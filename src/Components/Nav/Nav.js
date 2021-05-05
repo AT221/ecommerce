@@ -16,11 +16,11 @@ import account from '../Images/Navbar/account.png';
 import cart from '../Images/Navbar/cart.png';
 import search from '../Images/Navbar/search.png';
 
+//Handling Shipping Changes and Currency
+import {changeShipping} from '../../Redux/Actions/Actions';
+import {useHandleShipping} from '../../Functions/Shipping/shipping';
 
 
-
-
-// add java to on click replace usd to whatever content on click replace the header with img + currency abreviation
 const Nav = () => {
   const hideNav = useSelector (state => state.hideNav);
   const dispatch = useDispatch();
@@ -29,10 +29,12 @@ const Nav = () => {
     window.scrollY > 50 ? dispatch(down()) : dispatch(up());
   }
   window.addEventListener('scroll', handleSlide)
+
+
+  
     return (
     
          <div className={hideNav ? 'top-container-active' : 'top-container'}>
-         {/* <div className='top-container'> */}
             <header>
                 <div className='top-title'>
                   <h2 className={hideNav ? 'banner-active' : 'banner'}><a>Aye. T. C. Unlimited</a></h2>
@@ -42,13 +44,13 @@ const Nav = () => {
                 <nav className={hideNav ? 'nav-active' : 'nav'}>
                     <div className='shipping'>
                       <div className='shipping-txt'>
-                      <div>Shipping To:<span> $palceholder</span> </div>
+                      {useHandleShipping()}
                         <div className='shipping-content'>
-                          <a><img src={USA}/>United States</a>
-                          <a><img src={Canada}/>Canada</a>
-                          <a><img src={UK}/>United Kingdom</a>
-                          <a><img src={Mexico}/>Mexico</a>
-                          <a><img src={Japan}/>Japan</a>
+                          <a onClick={()=>{dispatch(changeShipping('USA', '1'))}}><img src={USA}/>United States</a>
+                          <a onClick={()=>{dispatch(changeShipping('CANADA', '2'))}}><img src={Canada}/>Canada</a>
+                          <a onClick={()=>{dispatch(changeShipping('UK', '3'))}}><img src={UK}/>United Kingdom</a>
+                          <a onClick={()=>{dispatch(changeShipping('MEXICO', '4'))}}><img src={Mexico}/>Mexico</a>
+                          <a onClick={()=>{dispatch(changeShipping('JAPAN', '5'))}}><img src={Japan}/>Japan</a>
                         </div>
                       </div>
                     </div>
@@ -141,8 +143,3 @@ const Nav = () => {
 }
 
 export default Nav;
-// $USA
-// £GBP
-// $CAD
-// $MXN
-// ¥JPY

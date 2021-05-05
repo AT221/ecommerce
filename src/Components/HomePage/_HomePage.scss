@@ -34,7 +34,7 @@
 }
 .review-heading{
     margin: 8vh 0;
-    height: 45vh;
+    height: 42vh;
     width: 100%;
     background-color: $reviewColor;
     color: $dropBackground;
@@ -56,7 +56,7 @@
 
     .ratings-container{
         list-style: none;
-
+        padding-bottom: 1vh;
     }
     .review-list{
         list-style: none;

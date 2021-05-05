@@ -53,6 +53,13 @@ export const down = () =>{
     }
 }
 
+// Handling The Shipping
+export const changeShipping = (country, num) =>{
+    return{
+        type: `${country}_${num}`
+    }
+}
+
 
 //Fetching Products
 export const fetchProducts = () =>{
