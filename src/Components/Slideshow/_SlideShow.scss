@@ -42,12 +42,12 @@
 
 .slide{
     opacity: 0;
-    transition-duration: .5s ;
+    // transition-duration: .5s ;
 }
 
 .slide.active{
     opacity: 1;
  //maybe keep these transition duration?
-    transition-duration: 4s;
+    // transition-duration: 4s;
     transform: scale(1.08);
 }

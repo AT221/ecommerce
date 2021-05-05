@@ -27,10 +27,10 @@ const SlideShow = () => {
 
 
 const nextSlide = () =>{
-  state === length - 1 ? dispatch(resetSlide()) : dispatch(increaseSlide());
+  state === length - 1 ? dispatch(resetSlide('SLIDE')) : dispatch(increaseSlide('SLIDE'));
 }
 const prevSlide = () =>{
-  state === 0  ?  dispatch(slideLength()) : dispatch(decreaseSlide());
+  state === 0  ?  dispatch(slideLength('SLIDE')) : dispatch(decreaseSlide('SLIDE'));
 }
 
 
