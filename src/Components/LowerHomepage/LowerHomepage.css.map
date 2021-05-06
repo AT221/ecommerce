@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,sBAAsB,CAAA;EAClB,QAAQ,EAAE,QAAQ;EAClB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CACtB",
+    "sources": [
+        "LowerHomepage.scss",
+        "../Variables/_Variables.scss"
+    ],
+    "names": [],
+    "file": "LowerHomepage.css"
+}

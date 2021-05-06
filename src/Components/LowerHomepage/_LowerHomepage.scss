@@ -1,0 +1,34 @@
+@import '../Variables/Variables';
+
+
+    .top-product-container{
+    @include centering(#ffff);
+    width: 90%;
+    margin: auto;
+        hr{
+            width: 50%;
+        }
+
+}
+
+.product-div{
+    display: flex;
+}
+
+
+
+.endorsement-container{
+    @include centering($navBackgroundColor);
+    margin-top: 10vh;
+    display: flex;
+    width: 100%;
+    
+    .figure-container{
+        margin: auto;
+        flex: 1;
+        padding: 10vh 0;
+        img{
+            max-width: 10vw;
+        }
+    }
+}
