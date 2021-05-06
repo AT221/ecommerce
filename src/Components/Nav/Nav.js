@@ -1,7 +1,7 @@
 import React from 'react';
 import './_Nav.scss';
 import {useSelector, useDispatch} from 'react-redux';
-import {up , down} from '../../Redux/Actions/Actions';
+import {up , down, changeBoolean} from '../../Redux/Actions/Actions';
 
 //Flags
 import USA from '../Images/Flags/USA.png';
@@ -23,7 +23,9 @@ import {useHandleShipping} from '../../Functions/Shipping/shipping';
 
 const Nav = () => {
   const hideNav = useSelector (state => state.hideNav);
+  const boolean = useSelector (state => state.search);
   const dispatch = useDispatch();
+  
 
   const handleSlide = () =>{
     window.scrollY > 50 ? dispatch(down()) : dispatch(up());
@@ -35,7 +37,7 @@ const Nav = () => {
     return (
     
          <div className={hideNav ? 'top-container-active' : 'top-container'}>
-            <header>
+            <header className='header'>
                 <div className='top-title'>
                   <h2 className={hideNav ? 'banner-active' : 'banner'}><a>Aye. T. C. Unlimited</a></h2>
                   <p className={hideNav ? 'nav-active' : 'nav'}>Free Shipping and Hassle-Free Returns Worldwide</p>
@@ -102,9 +104,9 @@ const Nav = () => {
 
 
 {/* Search */}
-                    <div className='search'>
+                    <div className='search' onClick={()=>dispatch(changeBoolean('SEARCH'))}>
                       <div className='search-img'>
-                        <img src={search}/>
+                        <img src={search} />
                       </div>
                     </div>
 
@@ -128,12 +130,10 @@ const Nav = () => {
                       </div>
                      </div>
                     </div>
-
-                    <div className='search-content'>
-                      <button type='submit'>
+                    {/* className={index === state ? 'slide active' : 'slide'} */}
+                    <div className={boolean ? 'search-active' : 'search-content'}>
                         <img src={search}/>
-                      </button>
-                        <input type='text' placeholder='Search...'/>
+                        <input className='input-txt' type='text' placeholder='Search...'/>
                     </div>
 
                 </nav>

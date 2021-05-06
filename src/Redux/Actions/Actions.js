@@ -60,6 +60,15 @@ export const changeShipping = (country, num) =>{
     }
 }
 
+//True false
+
+export const changeBoolean = (boo) =>{
+    return{
+        type:`${boo}_BOOLEAN`
+    }
+}
+
+
 
 //Fetching Products
 export const fetchProducts = () =>{
@@ -68,11 +77,14 @@ export const fetchProducts = () =>{
         try{
             const womensResponse = await axios.get(`https://dummyproducts-api.herokuapp.com/api/v1/departments/fashionwomen?apikey=MKTaAVOoJ11d`);
             const mensResponse = await axios.get(`https://dummyproducts-api.herokuapp.com/api/v1/departments/fashionmen?apikey=MKTaAVOoJ11d`);
+            const topSold=  await axios.get(`https://dummyproducts-api.herokuapp.com/api/v1/products/topsales?apikey=MKTaAVOoJ11d`);
             dispatch({
                 type: 'FETCH_PRODUCT_SUCCESS', 
                 payload_Womens: womensResponse.data.data,
                 payload_Mens: mensResponse.data.data,
-                payload_Ratings: womensResponse.data.product_ratings,
+
+                //top sold
+                payload_TopSold: topSold.data.data
             })
 
         }catch (error){

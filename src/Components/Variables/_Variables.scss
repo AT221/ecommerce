@@ -3,6 +3,7 @@ $dropHover: #F2F2F2;
 $dropBackground: #ffff;
 $navBackgroundColor:  #F2F2F2;
 $reviewColor: #3C4C58;
+$bannerColor: #758070;
 
 
 @mixin centering($color){
@@ -22,7 +23,7 @@ $reviewColor: #3C4C58;
     background-color: $dropBackground;
     width: 60%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 4;
     a{
         color: rgb(0, 0, 0);
         padding: 2% 0;
@@ -38,7 +39,7 @@ $reviewColor: #3C4C58;
     position: absolute;
     background-color: $dropBackground;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 4;
     width: 10vw;
     height: 10vw;
     

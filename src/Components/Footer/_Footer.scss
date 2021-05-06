@@ -1,0 +1,37 @@
+@import '../Variables/Variables';
+footer{
+    margin-top: 2vh;
+    width: 100%;
+    background-color: $reviewColor;
+    height: 40vh;
+    display: flex;
+
+    .list-container{
+        display: flex;
+        margin: auto;
+        width: 100%;
+        
+        ul{
+            flex: 1;
+            list-style: none;
+            color: $dropBackground;
+            li{
+                padding: 1vh 0;
+            }
+            hr{
+                width: 20%;
+                margin-left: 1%;
+            }
+        }
+        .newsletter{
+            margin-left: 20%;
+            flex:2;
+        }
+    }
+
+    
+}
+.divider{
+    height: 18vh;
+    display: none;
+}

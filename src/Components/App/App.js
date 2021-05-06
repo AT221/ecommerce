@@ -5,6 +5,8 @@ import HomePage from '../HomePage/HomePage';
 import Gallery from '../Gallery/Gallery';
 import Checkout from '../Checkout/Checkout';
 import SlideShow from '../Slideshow/SlideShow';
+import LowerHomepage from '../LowerHomepage/LowerHomepage';
+import Footer from '../Footer/Footer';
 
 
 const  App = () => {
@@ -13,6 +15,8 @@ const  App = () => {
       <Nav />
       <SlideShow/>
       <HomePage />
+      <LowerHomepage/>
+      <Footer />
       {/* <Gallery />
       <Checkout /> */}
     </div>

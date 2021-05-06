@@ -25,61 +25,61 @@ nav{
     margin: auto;
     flex-wrap: wrap;
     background-color: $navBackgroundColor;
-   margin-bottom: 1vh;
-   align-items: center;
+    margin-bottom: 1vh;
+    align-items: center;
 }
 
 span{
-font-size: 16px;
+    font-size: 16px;
 }
 
 .top-title{
     width: 100%;
     margin: auto;
-   h2{
+    h2{
         @include centering(none);
-   }
-   p{
-        @include centering(#758070);
+    }
+    p{
+        @include centering($bannerColor);
         padding: 1vh;
         color: #ffff;
-   }
+    }
 }
 
 .shipping{
     @include dropDown;
-        flex: 4;
-        .shipping-content{
-            @include categories(2.3vh 0 0 -3%);
-            @include dropDownContent;
-            margin-top: 1vh;
-            max-width: 10vw;
+    flex: 4;
+    .shipping-content{
+        @include categories(2.3vh 0 0 -3%);
+        @include dropDownContent;
+        margin-top: 1vh;
+        max-width: 10vw;
+        img{
+            max-width: 12%;
+            padding: 0 12% 0 5%;
+        }
+        a:hover{
+            background-color: $dropHover;
+        }
+    }
+    .shipping-txt{
+        width: fit-content;
+        padding: 3%;
+        span{
             img{
-                max-width: 12%;
-                padding: 0 12% 0 5%;
-            }
-                a:hover{
-                background-color: $dropHover;
+                padding:0 .5vw;
+                max-width: 4%;
             }
         }
-        .shipping-txt{
-            width: fit-content;
-            padding: 3%;
-            span{
-                img{
-                    padding:0 .5vw;
-                    max-width: 4%;
-                }
-            }
-        }
+    }
 }
 
 //All Hover Displays
 .shipping-txt:hover .shipping-content,
- .men-txt:hover .men-content, 
- .women-txt:hover .women-content,
- .account-img:hover .account-content,
- .cart-img:hover .cart-content{
+.men-txt:hover .men-content, 
+.women-txt:hover .women-content,
+.account-img:hover .account-content,
+.cart-img:hover .cart-content{
     display: block;
 }
 
@@ -127,25 +127,25 @@ font-size: 16px;
         text-align: center;
         width: 12vw;
         
-    .account-title{
-        margin: 2vh 0;
-    }
-    button{
-        width: 100%;
-        margin: 1vh 0;
+        .account-title{
+            margin: 2vh 0;
+        }
+        button{
+            width: 100%;
+            margin: 1vh 0;
+            
+            padding:1vh;
+        }
         
-        padding:1vh;
     }
-
-}
 }
 
 
 //Search
 .search{
     position: relative;
-            @include iconSize;
-      
+    @include iconSize;
+    
     
 }
 
@@ -176,7 +176,7 @@ font-size: 16px;
 .account, .cart, .search{
     flex: .5;
     height: 6vh;
-
+    
     align-items: center;
     
 }
@@ -187,29 +187,48 @@ font-size: 16px;
     align-items: center;
 }
 
-//on click display flex
+
 .search-content{
     display: none;
-    // display:flex;
     position: absolute;
     width: 90%;
     margin-top: 4.5vh;
-    z-index: 1;
-    button{
-        width: fit-content;
-        img{
-            max-width: 1.5vw;
-        }
-    }
-    input{
-        
-        // text-decoration: none;
-        display: block;
-        width: 100%;
-    cursor: pointer;
-}
+    z-index: 2;
 }
 
+
+.search-active{
+    display:flex;
+    position: absolute;
+    width: 100%;
+    margin-top: 12vh;
+    z-index: 1;
+    
+    img{
+        max-width: 2.5vw;
+        width: fit-content;
+        z-index: 2;
+        cursor: pointer;
+    }
+    input{
+        position: absolute;
+        background-color: $bannerColor;
+        border-color: $bannerColor;
+        color: $dropBackground;
+        text-align: center;
+        opacity: 80%;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        height: 4vh;
+    }
+    .input-txt{
+        font-size: 1rem;
+        color: #ffff;
+        letter-spacing: .3vw;
+    }
+}
 
 //Sliding Top Element Key Frames and Implementation
 
@@ -278,3 +297,8 @@ font-size: 16px;
     @include categories(2.2vh 0 0 -16.5%);
 }
 
+
+
+.header{
+    height: 15.5vh;
+}
