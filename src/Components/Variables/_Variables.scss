@@ -19,6 +19,7 @@ $bannerColor: #758070;
 
 @mixin dropDownContent{
     display: none;
+    min-width: fit-content;
     position: absolute;
     background-color: $dropBackground;
     width: 60%;
@@ -42,7 +43,7 @@ $bannerColor: #758070;
     z-index: 4;
     width: 10vw;
     height: 10vw;
-    
+    min-width: fit-content;
     a{
         color: rgb(0, 0, 0);
         text-decoration: none;

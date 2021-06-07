@@ -77,14 +77,16 @@ export const fetchProducts = () =>{
         try{
             const womensResponse = await axios.get(`https://dummyproducts-api.herokuapp.com/api/v1/departments/fashionwomen?apikey=MKTaAVOoJ11d`);
             const mensResponse = await axios.get(`https://dummyproducts-api.herokuapp.com/api/v1/departments/fashionmen?apikey=MKTaAVOoJ11d`);
-            const topSold=  await axios.get(`https://dummyproducts-api.herokuapp.com/api/v1/products/topsales?apikey=MKTaAVOoJ11d`);
+            const topSoldMens=  await axios.get(`https://dummyproducts-api.herokuapp.com/api/v1/departments/fashionmen/topsales?apikey=MKTaAVOoJ11d`);
+            const topSoldWomens =  await axios.get(`https://dummyproducts-api.herokuapp.com/api/v1/departments/fashionwomen/topsales?apikey=MKTaAVOoJ11d`);
             dispatch({
                 type: 'FETCH_PRODUCT_SUCCESS', 
                 payload_Womens: womensResponse.data.data,
                 payload_Mens: mensResponse.data.data,
 
                 //top sold
-                payload_TopSold: topSold.data.data
+                payload_TopSoldMens: topSoldMens.data.data,
+                payload_TopSoldWomens: topSoldWomens.data.data
             })
 
         }catch (error){

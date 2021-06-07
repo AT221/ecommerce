@@ -55,7 +55,8 @@ span{
         margin-top: 1vh;
         max-width: 10vw;
         img{
-            max-width: 12%;
+            min-width: 30px;
+            max-width: 35px;
             padding: 0 12% 0 5%;
         }
         a:hover{
@@ -67,6 +68,7 @@ span{
         padding: 3%;
         span{
             img{
+                min-width: 30px;
                 padding:0 .5vw;
                 max-width: 4%;
             }
@@ -96,8 +98,6 @@ span{
 //Men's Section
 .men, .women{
     @include dropDown;
-    
-    
     flex: 2;
     // text-align: center;
     .men-content, .women-content{
@@ -176,7 +176,6 @@ span{
 .account, .cart, .search{
     flex: .5;
     height: 6vh;
-    
     align-items: center;
     
 }
@@ -294,7 +293,7 @@ span{
 }
 
 .women-content{
-    @include categories(2.2vh 0 0 -16.5%);
+    @include categories(.7vh 0 0 -16.5%);
 }
 
 
