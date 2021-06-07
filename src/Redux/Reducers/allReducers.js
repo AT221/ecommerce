@@ -18,7 +18,6 @@ const allReducers = combineReducers({
     reviewSlide: counterCreator('REVIEW', ReviewData),
     country,
     search : booleanReducer('SEARCH')
-  
 })
 
 

@@ -9,7 +9,6 @@ const SlideShow = () => {
     const dispatch = useDispatch();
     const state = useSelector(state=> state.slide);
 
-
     const autoPlayRef = useRef();
     const length = SlideShowData.length;
 
@@ -25,14 +24,12 @@ const SlideShow = () => {
      }, [])
 
 
-
 const nextSlide = () =>{
   state === length - 1 ? dispatch(resetSlide('SLIDE')) : dispatch(increaseSlide('SLIDE'));
 }
 const prevSlide = () =>{
   state === 0  ?  dispatch(slideLength('SLIDE')) : dispatch(decreaseSlide('SLIDE'));
 }
-
 
     return (
         <section className='slider'>
