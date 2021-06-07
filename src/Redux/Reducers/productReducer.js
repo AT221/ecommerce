@@ -1,7 +1,8 @@
 const initState = {
     womensItems:[],
     mensItems:[],
-    topSold:[],
+    topSoldMens:[],
+    topSoldWomens:[],
 
     loading: false,
     error: null
@@ -23,7 +24,8 @@ const productReducer = (state=initState, action)=>{
                 loading:false,
                 womensItems:action.payload_Womens,
                 mensItems:action.payload_Mens,
-                topSold:action.payload_TopSold,
+                topSoldMens:action.payload_TopSoldMens,
+                topSoldWomens:action.payload_TopSoldWomens,
 
             } 
         case 'FETCH_PRODUCT_FAILURE':

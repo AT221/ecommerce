@@ -9,7 +9,7 @@ import {EndorsementImgs} from '../../Data/EndorsementData';
 const LowerHomepage = () => {
 
     const state = useSelector(state=> state.productReducer);
-    const topProduct = state.topSold.splice(0,4);
+    const topProduct = state.topSoldMens.splice(0,4);
 
     useApi()
     return(
