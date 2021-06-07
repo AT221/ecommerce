@@ -1,7 +1,7 @@
 import productReducer from './productReducer';
 import counterReducer from './counterReducer';
 import hideNavReducer from './hideNavReducer';
-import counterCreator from './counterCreatorReducer';
+import counterCreator from './creatorReducer.js';
 import country from './countryReducer';
 import booleanReducer from './booleanReducer';
 

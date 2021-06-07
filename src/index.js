@@ -6,6 +6,7 @@ import {createStore, compose, applyMiddleware} from 'redux';
 import allReducers from './Redux/Reducers/allReducers';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
+import { StrictMode } from 'react';
 
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f; 
@@ -16,7 +17,10 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
+  <StrictMode>
+    
     <App />
+  </StrictMode>
   </Provider>,
   document.getElementById('root')
 );
